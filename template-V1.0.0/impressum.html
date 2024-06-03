@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head style="display: none;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="display: none;">Impressum - Firmenname</title>                        <!--Firmenname-->
+    <link rel="icon" type="image/png" href="img/icon/logo.png"/>
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'none') {
+                navbar.style.display = 'flex';
+            } else if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+            }
+        };
+    </script>
+</head>
+<body style="background-image: url('img/marmor.jpg');">
+
+<header>
+    <h1 class="italic slide-in-l">Firmenname</h1>                                       <!--Firmenname-->
+    <img src="img/icon/logo.png" onclick="window.location.href='index.html'" class="slide-in-l boxstyle logo">
+</header>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+<nav id="navbar" class="navbar boxstyle smallscreen slide-in-r menu">
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='kontakt.html'">Kontakt</button>
+    <button onclick="window.location.href='angebote.html'">Angebote</button>
+    <button onclick="window.location.href='partner.html'">Partner</button>
+    <button onclick="window.location.href='impressum.html'">Impressum</button>
+</nav>
+<h2 class="slide-in-r" style="font-size: 3em;">IMPRESSUM</h2>
+<div class="textbox slide-in-l">
+    <p>Firmenname</p> <br>                                                              <!--Firmenname-->
+    <p>Adresse</p> <br>                                                                 <!--Adresse-->
+    <p>PLZ Ort</p> <br>                                                                 <!--PLZ Ort-->
+    <p>Inhaber: Name</p> <br>                                                           <!--Inhaber: Name-->
+</div>
+<footer>
+    <p>&copy; 2024 Josias Wolff</p>
+</footer>
+</body>
+<!--Build by Josias Wolff, 2024, 55596 Waldboeckelheim, Germany-->
+</html>

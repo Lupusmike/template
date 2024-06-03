@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title style="display: none;">Titel</title>                                                 <!--Titel-->
+    <link rel="icon" type="image/png" href="img/icon/logo.png"/>
+    <script style="display: none;">
+        document.addEventListener("DOMContentLoaded", function() {
+            const callButton = document.getElementById('callbutton');
+            callButton.addEventListener('click', () => {
+                window.location.href = "tel:06758430";                                          //Telefonnummer
+            });
+            const carouselItems = document.querySelectorAll(".carousel-item");
+            const captions = document.querySelectorAll(".caption");
+            
+            carouselItems.forEach((item, index) => {
+                if (index !== 0) {
+                    item.style.display = "none";
+                }
+            });
+            captions.forEach((item, index) => {
+                if (index !== 0) {
+                    item.style.display = "none";
+                }
+            });
+            let currentCarouselIndex = 0;
+            const carousel_nextbtn = document.getElementById("carousel-btn-next");
+            const carousel_previewbtn = document.getElementById("carousel-btn-preview");
+            
+            carousel_nextbtn.addEventListener('click', () => {
+                currentCarouselIndex = (currentCarouselIndex + 1) % carouselItems.length;
+                updateDisplayedImage(currentCarouselIndex);
+                updateCaption(currentCarouselIndex);
+            });
+            carousel_previewbtn.addEventListener('click', () => {
+                currentCarouselIndex = (currentCarouselIndex - 1 + carouselItems.length) % carouselItems.length;
+                updateDisplayedImage(currentCarouselIndex);
+                updateCaption(currentCarouselIndex);
+            });
+            function updateDisplayedImage(index) {
+                carouselItems.forEach((item, itemIndex) => {
+                    item.style.display = (index === itemIndex) ? "flex" : "none";
+                });
+
+                // Update the "active-carousel-img" element for styling purposes (optional)
+                const activeImg = document.getElementById("active-carousel-img");
+                activeImg.classList.remove("active-carousel-img");
+                carouselItems[index].classList.add("active-carousel-img");
+            }
+            function updateCaption(index) {
+                captions.forEach((item, itemIndex) => {
+                    item.style.display = (index === itemIndex) ? "flex" : "none";
+                });
+
+                const activecaption = document.getElementById("active-carousel-caption");
+                activecaption.classList.remove("active-carousel-caption"); 
+                carouselItems[index].classList.add("active-carousel-caption");
+            }
+        });
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'none') {
+                navbar.style.display = 'flex';
+            } else if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+            }
+        };
+    </script>
+</head>
+<body style="background-image: url('img/marmor.jpg');">
+
+<header>
+    <h1 class="slide-in-l">Willkommen bei </h1>
+    <div>
+        <h1 class="italic slide-in-l">Firmenname</h1>                                   <!--Firmenname-->
+    </div>
+    <img alt="Firmen Logo" src="img/icon/logo.png" onclick="window.location.href='index.html'" class="boxstyle logo slide-in-l">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+<nav id="navbar" class="navbar boxstyle smallscreen slide-in-r menu">
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='kontakt.html'">Kontakt</button>
+    <button onclick="window.location.href='angebote.html'">Angebote</button>
+    <button onclick="window.location.href='partner.html'">Partner</button>
+    <button onclick="window.location.href='impressum.html'">Impressum</button>
+</nav>
+
+<div class="boxstyle slide-in-l haus-txt">
+    <img alt="Foto der Vorderseite" src="img/icon/haus.jpg" class="haus">
+    <div class="column">
+    <h3 class="description">Kurze Beschreibung Ihres Unternehmens/Ihrer Produkte
+    </h3>
+    <div class="list">
+        <p class="bold underline">Wir bieten Ihnen:</p>
+        <ul class="bold">
+            <li>• Über --- Jahre Erfahrung</li>
+            <li>• Individuelle Beratung</li>
+            <li>• Hochwertige Artikel</li>
+        </ul>
+    </div>
+    
+    <h3>Rufen sie uns an!</h3>
+        <div class="bold">
+            <button id="callbutton">
+                <img alt="Telefon-Knopf" src="img/icon/phone.svg">
+            </button>
+            <p>Tel: 06758/12345</p><br>                                               <!--Telefonnummer-->
+        </div>
+    </div>
+</div>
+<div class="boxstyle bold" style="font-size: 2vw;">
+    <p>Öffnungszeiten von Montag bis Freitag von --:-- Uhr bis --:-- Uhr</p>        <!--Öffnungszeiten-->
+</div>
+<div class="column slide-in-r boxstyle ">
+    <h3 class="underline">Unsere Produkte</h3>
+    <div class="carousel">
+        <button class="carousel-btn" id="carousel-btn-preview"><img src="img/icon/last.svg" alt="Bilderkarousell zurück"></button>
+        <div class="carousel-item" id="active-carousel-img">
+            <img id="glasses" class="carousel-img" src="img/glasses.jpg">           <!--Bild-->
+            <p class="caption" id="active-carousel-caption">Caption</p>             <!--Caption-->
+        </div>
+        <div class="carousel-item">
+            <img id="watch" class="carousel-img" src="img/watch.jpg">               <!--Bild-->
+            <p class="caption">Caption</p>                                          <!--Caption-->
+        </div>
+        <div class="carousel-item">
+            <img id="schmuck" class="carousel-img" src="img/schmuck.jpg">           <!--Bild-->
+            <p class="caption">Caption</p>                                          <!--Caption-->
+        </div>
+        <button class="carousel-btn" id="carousel-btn-next"><img src="img/icon/next.svg" alt="Bilderkarousell nächstes"></button>
+    </div>
+
+</div>
+<div class="boxstyle about">
+    <h2 class="underline">Über Uns</h2> <br>
+    <p>Willkommen zu Firmenname. <br>                                               <!--Firmenname-->
+    Branche seit --Jahreszahl--.</p>                                            <!--Branche-->
+</div>
+<footer>
+    <p>&copy; 2024 Josias Wolff</p>
+</footer>
+
+</body>
+<!--Build by Josias Wolff, 2024, 55596 Waldboeckelheim, Germany-->
+</html>
