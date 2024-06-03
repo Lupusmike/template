@@ -1,0 +1,46 @@
+<div class="products">
+    <div class="description boxstyle">
+        <ul>
+        <li><h2>Produkt Nummer 1</h2></li>
+        <li><h2>Produkt Nummer 2</h2></li>
+        <li><h2>Produkt Nummer 3</h2></li>
+    </ul></div>
+</div>
+
+<div class="boxstyle slide-in-l">
+    <nav class="line">
+        <a href="optik-pitzer.html">Home</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="angebote.html">Angebote</a>
+        <a href="partner.html">Partner</a>
+        <a href="impressum.html">Impressum</a>
+    </nav>
+</div>
+
+--background-color: #f6efe7;
+--buttoncolor: #a4bcc4;
+--fontcolor: #1f222b;
+--hovercolor: #8f9294;
+--boxstyle: #f4f3f3;
+--boxcolor: #d9e0e2;
+
+--background-color: #f6efe7;
+--buttoncolor: #e09789; 
+--fontcolor: #3c5556;
+--hovercolor: #c8dbd7;
+--boxstyle: #f6efe7;
+--boxcolor: #f5d4c3;
+
+wald: --fontcolor: #3c5556;
+    --buttoncolor: #523D35;
+    --boxcolor: #959D90;
+    --hovercolor: #c8dbd7;
+    --background-color: #BBA58F;
+    --boxstyle: #E8D9CD;
+
+beige:     --fontcolor: #3c5556;
+    --buttoncolor: #e09789;
+    --boxcolor: #f5d4c3;
+    --hovercolor: #c8dbd7;
+    --background-color: #f6efe7;
+    --boxstyle: #f6efe7;

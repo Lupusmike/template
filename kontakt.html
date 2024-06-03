@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head style="display: none;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="display: none;">Kontakt - Firmenname</title>                          <!--Firmenname-->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" href="img/icon/logo.png"/>
+    <script style="display: none;">
+    document.addEventListener("DOMContentLoaded", function() {
+        const callButton = document.getElementById('callbutton');
+        callButton.addEventListener('click', () => {
+            window.location.href = "tel:015779075227";
+        });
+        const mailbutton = document.getElementById('mailbutton');
+        mailbutton.addEventListener('click', () => {
+            window.location.href = "mailto:info@optik-pitzer.de";                       //Mailadresse
+        });
+    });
+    function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'none') {
+                navbar.style.display = 'flex';
+            } else if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+            }
+        };
+    </script>
+</head>
+<body style="background-image: url('img/marmor.jpg');">
+
+<header>
+    <h1 class="italic slide-in-l">Firmenname</h1>                                       <!--Firmenname-->
+    <img src="img/icon/logo.png" onclick="window.location.href='index.html'" class="slide-in-l boxstyle logo">
+</header>
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+<nav id="navbar" class="navbar boxstyle smallscreen slide-in-r menu">
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button onclick="window.location.href='kontakt.html'">Kontakt</button>
+    <button onclick="window.location.href='angebote.html'">Angebote</button>
+    <button onclick="window.location.href='partner.html'">Partner</button>
+    <button onclick="window.location.href='impressum.html'">Impressum</button>
+</nav>
+<h2 style="font-size: 3em;" class="slide-in-r">KONTAKT</h2>
+<div class="textbox slide-in-l">
+    <div class="contacts">
+        <h3 class="underline">Anschrift</h3>
+        <div class="bold subcontact">
+            <button onclick="window.location.href='https://maps.app.goo.gl/pFCG55LFG94xCxvK7'"><img src="img/icon/pin.svg"></button>
+            <p>Adresse, PLZ Ort</p> <br></div>                                           <!--Adresse, PLZ Ort-->
+        <div class="bold subcontact"><button id="callbutton"><img src="img/icon/phone.svg"></button>
+            <p>Tel: 06758/12345</p> <br></div>                                           <!--Telefonnummer-->
+        <div class="bold subcontact">
+            <button id="mailbutton"><img src="img/icon/mail.svg"></button>
+            <p>E-mail: ihre@mail.de</p> <br></div>                              <!--Mailadresse-->
+        <div class="bold subcontact">
+            <div>
+                <p>Öffnungszeiten von Montag bis Freitag von --:-- Uhr bis --:-- Uhr</p>    <!--Öffnungszeiten-->
+            </div> <br>
+            <p>Inhaber: Name</p> <br></div>                                     <!--Inhaber: Name-->
+        </div>
+    </div>
+    
+</div>
+<footer>
+    <p>&copy; 2024 Josias Wolff</p>
+</footer>
+</body>
+<!--Build by Josias Wolff, 2024, 55596 Waldboeckelheim, Germany-->
+</html>

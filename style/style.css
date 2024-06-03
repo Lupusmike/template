@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--fontcolor);
+    display: block;
+  }
+body {                                                  /*Farb-Palette*/
+    font-family: Arial, sans-serif;
+    --fontcolor: #3c5556;
+    --buttoncolor: #3c5556;
+    --boxcolor: #959D90;
+    --hovercolor: #c8dbd7;
+    --background-color: #BBA58F;
+    --boxstyle: #E8D9CD;
+    --hovercolor_button: #523D35;
+
+    
+    background-color: var(--background-color);
+    /*background-image: url('img/marmor.jpg');*/
+    background-image: url('img/icon/zweige.jpg');
+    
+    padding: 20px;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+html {
+    margin: auto;
+}
+div {
+    display: inline-block;
+}
+.tight {
+    width: max-content;
+}
+.right {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    white-space: no-wrap;
+}
+.menu-toggle {
+    margin: auto;
+    margin-top: 0.8vw;
+    display: none;
+}
+body, h1, p, footer {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 5vw;
+    color: var(--fontcolor)
+}
+h2 {
+    margin: 2px;
+}
+h3 {
+    font-size: 2em;
+    margin-left: 10px;
+}
+p {
+    white-space: break-spaces;
+    font-family: Montserrat;
+    font-size: 20px;
+}.bold > *{
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+.products {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    text-align: center;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.boxstyle {
+    max-width: 80vw;
+    margin: 0 auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    background-color: var(--boxcolor);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 153, 255, 0.048);
+    border-bottom: 1px solid rgba(219, 219, 219, 0.5);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxstyle * {
+    display: flex;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+.subpart > * {
+    display: flex;
+}
+.about {
+    flex-direction: column;
+}
+ul {
+    flex-direction: column;
+    padding-left: 2vw;
+}
+li {
+    list-style: inside;
+}
+.list p {
+    font-size: 2vw;;
+}
+.column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav a {
+    text-decoration: none;
+    color: var(--buttoncolor);
+    font-weight: bold;
+    margin-right: 20px;
+    display: flex;
+}
+.no-a:hover > * {
+    background-color: none;
+}
+button {
+    font-size: 1vw;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--buttoncolor);
+    color: var(--background-color);
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+}
+button::before {
+    transition: width 0.4s ease-in-out;
+}
+button:hover::before {
+    width: 100%;
+}
+button:hover {
+    background-color: var(--hovercolor_button);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);  
+}
+a:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background-color: var(--fontcolor);
+    border-radius: 10px;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(220, 220, 220, 0.5);
+    color: #777;
+    font-size: 14px;
+}
+.haus {
+    width: 540px;
+    max-width: 50%;
+    border: 3px solid rgb(0, 0, 0); 
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgb(0, 0, 0);  
+    opacity: 89%;
+}
+.black {
+    background-color: hsl(0, 0%, 20%);
+}
+.logo {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.logo:hover {
+    cursor: pointer;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+.textbox {
+    max-width: 95vw;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 153, 255, 0.048);
+    border-bottom: 1px solid rgba(219, 219, 219, 0.5);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--boxcolor);
+}
+.list {
+    font-size: 1.8vw;
+    flex-direction: column;
+    align-items: center;
+}
+@keyframes slide-in-l {
+    from {
+        transform: translateX(-100%); /* Start off-screen */
+        opacity: 0%;
+    }
+    to {
+        transform: translateX(0); /* Slide in to original position */
+        opacity: 100%;   
+    }
+}
+@keyframes slide-in-r {
+    from {
+        transform: translateX(100%); /* Start off-screen */
+        opacity: 0%;
+    }
+    to {
+        transform: translateX(0); /* Slide in to original position */
+        opacity: 100%;   
+    }
+}
+@keyframes smooth {
+    from {
+        background-color: hsla(0, 0%, 87%, 0.904);
+    }
+    to {
+        background-color: var(--background-color);
+    }
+} 
+.slide-in-l {
+    animation: slide-in-l 0.5s ease-out forwards;
+}
+.slide-in-r {
+    animation: slide-in-r 0.5s ease-out forwards;
+}
+body {
+    animation: smooth 1s ease-in;
+}
+.bold {
+    font-weight: 600;
+}
+.carousel {
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+}
+.carousel-img {
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 0.5vw;
+}
+.carousel-item .caption {
+    position: absolute;
+    padding: 0.5vw; 
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: var(--fontcolor);
+    display: block;
+  }
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.carousel-btn {
+    justify-content: center;
+    margin-left: 10px;
+}
+.list li {
+    text-align: left;
+}
+@media (max-width: 554px) {
+    .subcontact {
+        display: flex;
+    }
+}
+@media (max-width: 630px) {
+    h1 {
+      font-size: 6vw;
+      width: 80vw;
+      margin: 0 auto;
+    }
+    .boxstyle.smallscreen  {
+        flex-direction: column;
+        width: 100%;
+        margin-left: auto;
+        width: 40vw;
+    }
+    .boxstyle {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+}
+@media (max-width: 785px) {
+    .haus {
+        max-width: 70vw;
+    }
+    .boxstyle {
+        flex-direction: column;
+        width: 100vw;
+    }
+    button {
+        font-size: 1em;
+    }
+    .carousel-btn {
+        width: 2vw;
+    }
+    .carousel {
+        width: 100%;
+    }
+    .description {
+        font-size: 5vw;
+        white-space: break-spaces;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }
+    .list {
+        font-size: 1.4em;
+    }
+    .list p {
+        font-size: 2em;
+    }
+    .carousel-item .caption {
+        font-size: 1.5em;
+    }
+}
+/*Build by Josias Wolff, 2024, 55596 Waldboeckelheim, Germany*/

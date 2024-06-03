@@ -1,0 +1,15 @@
+prompts:
+
+generate a color palate suitable for a wood selling business website make specific suggestions for each of these variable names. Order them and state them to me like: 
+--fontcolor: #______;
+--buttoncolor: #______;
+--boxcolor: #______;
+--hovercolor: #______;
+--backgroundcolor: #______;
+--boxstyle: #______;
+Remove/avoid any comments
+Make it look professional and comfortable to look at
+
+
+
+Adjust it to dark background where it might conflict with fontcolor
